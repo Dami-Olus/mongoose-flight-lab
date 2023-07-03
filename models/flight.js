@@ -14,4 +14,8 @@ const flightSchema = new Schema({
     required: true,
   },
   depature: {},
+}, {
+  timestamps: true
 });
+
+module.exports = mongoose.model('Flight', flightSchema); 
