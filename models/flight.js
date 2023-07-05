@@ -6,14 +6,16 @@ const flightSchema = new Schema({
   airline: {
     type: String,
   },
-  aiport: { type: String },
-  airline: { 
+  airport: { type: String },
+  flightNumber: { 
     type: Number,
     min: 10,
     max: 999,
     required: true,
   },
-  depature: {},
+  depature: {
+    
+  },
 }, {
   timestamps: true
 });
