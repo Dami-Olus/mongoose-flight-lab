@@ -15,7 +15,7 @@
       <td><%= f.airline%></td>
       <td><%= f.airport%></td>
       <td><%= f.flightNumber%></td>
-      <td><%= f.depature%></td>
+      <td><%= f.depature.toLocaleString()%></td>
       <td><a href="/flights/<%=f._id%>">Details</a></td>
     </tr>
     
