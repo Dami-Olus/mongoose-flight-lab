@@ -7,16 +7,22 @@
 <div>Tickets</div>
 <div><a href="/flights/<%=flight._id%>/tickets/new">New Ticket</a></div>
 
+<% ticket.forEach(function(t){ %>
+<div><%= t.seat %> | <%= t.price %></div>
+
+<% }) %>
+
 <div>
   <h3>Destinations</h3>
   <% flight.destinations.forEach(function(d){ %>
-    <ul>
-      <li>
-        Airport: <%= d.airport %> <br> Arrival: <%= d.arrival %>
-      </li>
-    </ul>
-    
-    <% }) %>
+  <ul>
+    <li>
+      Airport: <%= d.airport %> <br />
+      Arrival: <%= d.arrival %>
+    </li>
+  </ul>
+
+  <% }) %>
 </div>
 
 <form action="/flights/<%=flight._id%>/destinations" method="POST">
