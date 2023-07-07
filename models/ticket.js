@@ -11,7 +11,7 @@ const ticketSchema = new Schema({
     type: Number,
     min: 0,
   },
-  flight: { type: mongoose.Schema.Types.ObjectId, ref: "flight" },
+  flight: { type: Schema.Types.ObjectId, ref: "flight" },
 });
 
 module.exports = mongoose.model("Ticket", ticketSchema);
